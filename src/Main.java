@@ -20,18 +20,24 @@ public class Main {
 
         //создаем гамбургеры по рецептам
         Food hamburger = HamburgerMaker.make(RECIPE);
-        Food hamburger1 = HamburgerMaker.make(RECIPE_1);
-        Food hamburger2 = HamburgerMaker.make(RECIPE_2);
-        Food hamburger3 = HamburgerMaker.make(RECIPE_3);
-        Food hamburger4 = HamburgerMaker.make(RECIPE_4);
+//        Food hamburger1 = HamburgerMaker.make(RECIPE_1);
+//        Food hamburger2 = HamburgerMaker.make(RECIPE_2);
+//        Food hamburger3 = HamburgerMaker.make(RECIPE_3);
+//        Food hamburger4 = HamburgerMaker.make(RECIPE_4);
 
 
         //разогреваем
-        Oven.reheatFood(hamburger, 80);
-        Oven.reheatFood(hamburger1, 100);
-        Oven.reheatFood(hamburger2, 150);
-        Oven.reheatFood(hamburger3, 170);
-        Oven.reheatFood(hamburger4, -200);
+        try {
+            Oven.reheatFood(hamburger, 80);
+        } catch (OvenException e) {
+            e.printStackTrace();
+        }
+
+
+//        Oven.reheatFood(hamburger1, 100);
+//        Oven.reheatFood(hamburger2, 150);
+//        Oven.reheatFood(hamburger3, 170);
+//        Oven.reheatFood(hamburger4, -200);
 
 
     }

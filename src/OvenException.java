@@ -1,4 +1,4 @@
 // TODO: Доработайте собственное исключение
-class OvenException {
+class OvenException extends Exception{
 
 }
